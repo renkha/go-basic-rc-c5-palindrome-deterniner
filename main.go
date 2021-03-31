@@ -35,8 +35,8 @@ func (w Word) polindromeDeterminer() (string, error) {
 	//condition for polindrome or not
 	output := string(input)
 	if output == w.word {
-		return string("Polindrome: " + output), nil
+		return "Polindrome: " + output, nil
 	} else {
-		return string("Not Polindrome: " + output), nil
+		return "Not Polindrome: " + output, nil
 	}
 }
