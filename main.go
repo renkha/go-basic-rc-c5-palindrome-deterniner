@@ -27,15 +27,16 @@ func (w Word) polindromeDeterminer() (string, error) {
 	}
 
 	//reversing input
-	output := []rune(w.word)
-	for i, j := 0, len(output)-1; i < j; i, j = i+1, j-1 {
-		output[i], output[j] = output[j], output[i]
+	input := []rune(w.word)
+	for i, j := 0, len(input)-1; i < j; i, j = i+1, j-1 {
+		input[i], input[j] = input[j], input[i]
 	}
 
 	//condition for polindrome or not
-	if string(output) == w.word {
-		return string("Polindrome: " + string(output)), nil
+	output := string(input)
+	if output == w.word {
+		return string("Polindrome: " + output), nil
 	} else {
-		return string("Not Polindrome: " + string(output)), nil
+		return string("Not Polindrome: " + output), nil
 	}
 }
